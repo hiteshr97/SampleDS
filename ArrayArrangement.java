@@ -39,10 +39,10 @@ class Sol
     {
         // code here.
         int n = arr.length;
-        Arrays.sort(arr);
+        Arrays.sort(arr); 
         Queue<Integer> que = new LinkedList<>(); 
 
-        for(int i =n-1;i>=0;i--){
+        for(int i =n-1;i>=0;i--){      
             if(que.isEmpty()){
                que.offer(arr[i]); 
             }else if(i!=0){
@@ -64,7 +64,7 @@ class Sol
 }
 
 /*
-the solution is based on the reverse programing with a execution time of  3 sec and o(n) , output is achieved by retracing the expected result to yeild the expected output.
+the solution is based on the reverse programing with a execution time of  3 sec and o(n) , output is achieved by retracing the expected result and bottom up approach to get the result.
 We haave used aa queue to maintain the insertion ordr  and store the data. for example we have 
 1 7 2 5 4 8 4       // 1 is poped
   7 2 5 4 8 4       // 7 is moved to last of the queue
@@ -78,6 +78,13 @@ We haave used aa queue to maintain the insertion ordr  and store the data. for e
           8 7
           7 8
             8
+            
+            
+            
+            
+- create a sorted array
+- iterate through the array in reverse order and add to the queue
+-after each value pushed int the queue from  tail we have to  pop the first element from head and add it back from the tail.
 
 
 */
